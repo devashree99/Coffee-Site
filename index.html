@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    .card-image img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .columns {
+      display: flex;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .card-content {
+      flex-grow: 1;
+    }
+
+    .card-footer {
+      flex-shrink: 0;
+    }
+  </style>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar has-shadow is-white">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img
+            src="logo.png"
+            alt="site logo"
+            style="max-height: 70px"
+            class="py-2 px-2"
+          />
+        </a>
+        <a class="navbar-burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="nav-links">
+        <div class="navbar-end">
+          <a class="navbar-item">My Account</a>
+          <a class="navbar-item">Cart(0)</a>
+        </div>
+      </div>
+    </nav>
+    <!-- breadcrumbs -->
+    <div class="section pt-4 pb-0">
+      <nav class="breadcrumb has-arrow-separator">
+        <ul class="container">
+          <li><a class="has-text-grey">Coridoor Seven</a></li>
+          <li><a class="has-text-grey">Shopping</a></li>
+          <li class="is-active">
+            <a>Vienna Profile dark roast</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- grid columns -->
+    <section class="section">
+      <div class="container">
+        <div class="columns is-vcentered is-multiline">
+          <div class="column is-6-tablet is-3-desktop">
+            <h1 class="is-size-3-mobile is-size-1-desktop title">
+              Vienna Profile
+            </h1>
+            <h2 class="is-size-3-mobile is-size-2-desktop subtitle">
+              Dark Roast
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus autem at blanditiis veritatis doloribus quia, id
+              iure quaerat facere enim. Consequuntur soluta odio voluptatibus
+              minus reprehenderit eum animi voluptates est!
+            </p>
+          </div>
+          <div class="column is-6-tablet is-5-desktop has-text-centered">
+            <img src="product.png" alt="coffee image" class="px-6" />
+          </div>
+          <div class="column is-12-tablet is-4-desktop">
+            <div class="is-size-4 mb-4">₹460.00 INR</div>
+            <p class="mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit
+            </p>
+            <form>
+              <div class="field">
+                <div class="control mb-6">
+                  <div class="select is-dark">
+                    <select>
+                      <option>Small(250g)</option>
+                      <option>Medium(500g)</option>
+                      <option>Large(1kg)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <button class="button is-primary">Add to Cart</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- tabbed content -->
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-7-tablet">
+            <div class="tabs is-boxed">
+              <ul id="tabs">
+                <li class="is-active" data-tab="product-detail">
+                  <a>Product Details</a>
+                </li>
+                <li data-tab="delivery-information">
+                  <a>Delivery Information</a>
+                </li>
+              </ul>
+            </div>
+            <!-- product info -->
+            <div class="px-2" id="tab-content">
+              <div id="product-detail">
+                <h3 class="is-size-5 title">Product Details</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur, nihil illum eaque iusto quos officiis assumenda
+                  perspiciatis soluta excepturi voluptates ratione magni
+                  reprehenderit adipisci provident consequatur necessitatibus
+                  voluptatum suscipit perferendis?
+                </p>
+              </div>
+              <!-- delivery info -->
+              <div id="delivery-information" class="is-hidden">
+                <h3 class="is-size-5 title">Delivery Information</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Veniam beatae velit neque aliquam, magni culpa voluptas?
+                  Facilis aspernatur cupiditate ipsum quaerat consectetur,
+                  soluta est ex fuga adipisci, necessitatibus accusamus sint!
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- message-box -->
+          <div class="column is-5-tablet">
+            <div class="message">
+              <div class="message-header">
+                <p>Earn Points with the Coffee Club</p>
+              </div>
+              <div class="message-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  earum totam optio, eos, iusto rerum facilis, excepturi
+                  repellat quibusdam culpa in! Repellendus est adipisci dolorem
+                  incidunt quisquam ab, iste voluptates.
+                </p>
+                <div class="has-text-centered">
+                  <button class="button mt-5" id="signup">Sign Up</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section is-hidden-mobile">
+      <div class="container">
+        <h3 class="title has-text-centered is-size-4">Related Products</h3>
+        <div class="columns mt-5 is-variable is-centered">
+          <!-- First card -->
+          <div class="column is-4-tablet is-3-desktop">
+            <div class="card">
+              <div class="card-image has-text-centered px-6">
+                <img src="coffee1.jpg" alt="Tropical CocoMalt" />
+              </div>
+              <div class="card-content">
+                <p class="is-size-5">₹195.00</p>
+                <p class="title is-size-5">Tropical CocoMalt</p>
+              </div>
+              <footer class="card-footer">
+                <p class="card-footer-item">
+                  <a class="has-text-grey">View</a>
+                </p>
+              </footer>
+            </div>
+          </div>
+
+          <!-- Second card -->
+          <div class="column is-4-tablet is-3-desktop">
+            <div class="card">
+              <div class="card-image has-text-centered px-6">
+                <img src="coffee2.jpg" alt="BlackSmith Tub" />
+              </div>
+              <div class="card-content">
+                <p class="is-size-5">₹285.00</p>
+                <p class="title is-size-5">BlackSmith Tub</p>
+              </div>
+              <footer class="card-footer">
+                <p class="card-footer-item">
+                  <a class="has-text-grey">View</a>
+                </p>
+              </footer>
+            </div>
+          </div>
+
+          <!-- Third card -->
+          <div class="column is-4-tablet is-3-desktop">
+            <div class="card">
+              <div class="card-image has-text-centered px-6">
+                <img src="coffee7.jpg" alt="Double Ducktape" />
+              </div>
+              <div class="card-content">
+                <p class="is-size-5">₹170.00</p>
+                <p class="title is-size-5">Double Ducktape</p>
+              </div>
+              <footer class="card-footer">
+                <p class="card-footer-item">
+                  <a class="has-text-grey">View</a>
+                </p>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal structure -->
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content has-background-white py-5 px-5">
+        <h3 class="title mb-6">Join the Club</h3>
+        <form>
+          <!-- for name -->
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input type="text" class="input" placeholder="Name" />
+            </div>
+          </div>
+          <!-- for email -->
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input type="text" class="input" placeholder="Email" />
+            </div>
+          </div>
+          <!-- for checkbox -->
+          <div class="field">
+            <div class="controle">
+              <label class="checkbox">
+                <input type="checkbox" />
+                I agree to the <a href="">terms & Conditions</a>
+              </label>
+            </div>
+          </div>
+          <!-- button -->
+          <div class="mt-6 has-text-centered">
+            <button class="button is-warning">Sign Up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>Copyright 2024</p>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
